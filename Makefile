@@ -24,9 +24,6 @@ clean:
 fclean: clean
 	$(RM) $(NAME)
 
-test: $(NAME) main.c
-	$(CC) $(CFLAGS) main.c $(OBJ) -o test_printf
-	./test_printf
 re: fclean all
 
 .PHONY: all clean fclean re

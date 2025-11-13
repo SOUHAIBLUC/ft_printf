@@ -6,7 +6,7 @@
 /*   By: so-ait-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 17:58:23 by so-ait-l          #+#    #+#             */
-/*   Updated: 2025/11/08 17:38:50 by so-ait-l         ###   ########.fr       */
+/*   Updated: 2025/11/12 09:59:14 by so-ait-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static char	*ft_itoa(long n)
 	char	*ptr;
 	long	nb;
 
-	int (last_index), (len),(i);
+	int (last_index), (len), (i);
 	len = ft_count(n);
 	ptr = malloc(len + 1);
 	if (!ptr)

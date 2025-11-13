@@ -6,13 +6,13 @@
 /*   By: so-ait-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 17:09:25 by so-ait-l          #+#    #+#             */
-/*   Updated: 2025/11/08 18:53:27 by so-ait-l         ###   ########.fr       */
+/*   Updated: 2025/11/13 11:21:37 by so-ait-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static char	*ft_fill(unsigned int nb, char *buffer)
+static char	*ft_fill(uintptr_t nb, char *buffer)
 {
 	int (i), (len), (rem);
 	i = 0;
@@ -31,7 +31,7 @@ static char	*ft_fill(unsigned int nb, char *buffer)
 	return (buffer);
 }
 
-int	ft_print_p(unsigned long nb)
+int	ft_print_p(uintptr_t nb)
 {
 	char	*str;
 	char	rest[20];

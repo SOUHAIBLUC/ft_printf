@@ -6,11 +6,12 @@
 /*   By: so-ait-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 10:08:03 by so-ait-l          #+#    #+#             */
-/*   Updated: 2025/11/08 18:41:17 by so-ait-l         ###   ########.fr       */
+/*   Updated: 2025/11/13 11:16:55 by so-ait-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdlib.h>
 
 int	ft_check(va_list args, char format)
 {
@@ -27,7 +28,7 @@ int	ft_check(va_list args, char format)
 	else if (format == 'x')
 		return (ft_print_x(va_arg(args, unsigned int)));
 	else if (format == 'p')
-		return (ft_print_p(va_arg(args, unsigned int)));
+		return (ft_print_p(va_arg(args, uintptr_t)));
 	else if (format == 'c')
 	{
 		c = va_arg(args, int);
