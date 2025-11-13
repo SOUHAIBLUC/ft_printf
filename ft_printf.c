@@ -6,7 +6,7 @@
 /*   By: so-ait-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 10:08:03 by so-ait-l          #+#    #+#             */
-/*   Updated: 2025/11/13 11:16:55 by so-ait-l         ###   ########.fr       */
+/*   Updated: 2025/11/13 14:41:33 by so-ait-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,14 +49,13 @@ int	ft_printf(const char *format, ...)
 	va_start(args, format);
 	count = 0;
 	i = 0;
+	if (!format)
+		return (0);
 	while (format[i])
 	{
 		nb = 0;
 		if (format[i] == '%' && format[i + 1])
-		{
-			i++;
-			nb = ft_check(args, format[i]);
-		}
+			nb = ft_check(args, format[++i]);
 		else
 			nb = write(1, &format[i], 1);
 		if (nb == -1)

@@ -10,11 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "stdio.h"
 #include "ft_printf.h"
 
-int	main(int argc, char *argv[])
+int main()
 {
-	ft_printf("%p\n", (void *)-1);
-	printf("%p\n", (void *)-1);
-	return (EXIT_SUCCESS);
+    int ret1, ret2;
+
+    ret1 = printf("printf:    Hello %s!\n", "world");
+    ret2 = ft_printf("ft_printf: Hello %s!\n", "world");
+    printf("Return values -> printf: %d | ft_printf: %d\n\n", ret1, ret2);
+
 }
