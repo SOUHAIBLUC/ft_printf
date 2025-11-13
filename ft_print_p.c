@@ -14,9 +14,8 @@
 
 static char	*ft_fill(uintptr_t nb, char *buffer)
 {
-	int(i), (len), (rem);
+	int (i), (rem);
 	i = 0;
-	len = 0;
 	while (nb > 0)
 	{
 		rem = nb % 16;
@@ -36,7 +35,7 @@ int	ft_print_p(uintptr_t nb)
 	char	*str;
 	char	rest[20];
 
-	int(i), (len), (count), (ret);
+	int (i), (len), (count), (ret);
 	count = 0;
 	if (nb == 0)
 		return (write(1, "(nil)", 5));

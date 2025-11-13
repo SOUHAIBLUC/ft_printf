@@ -14,9 +14,8 @@
 
 static char	*ft_fill(unsigned int nb, char *buffer)
 {
-	int (i), (len), (rem);
+	int (i), (rem);
 	i = 0;
-	len = 0;
 	while (nb > 0)
 	{
 		rem = nb % 16;
